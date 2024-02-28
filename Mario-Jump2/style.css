@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.game-board{
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff), radial-gradient(circle at 50% 100%, rgba(138, 201, 71, 0.7), transparent 50%);
+    background-blend-mode: overlay;
+    position: relative;
+}
+
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.jump{
+    animation: jump 500ms  ease-out;
+}
+
+.nuvem{
+    
+    position: absolute;
+    width: 550px;
+    animation: nuvem-animation 20s infinite linear;
+
+}
+#gameOverBtn {
+    padding: 10px 20px;
+    font-size: 50px;
+    background-color: #dc143c; 
+    color: white;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: none;
+    font-weight: bold;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#gameOverBtn:hover {
+    background-color: #ffcc00; 
+}
+
+
+.pontuacao {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: #E52521;
+    display: inline;
+    position: absolute; 
+    top: 30px; 
+    left: 25px; 
+    max-height: 100px;
+}
+
+
+
+
+
+
+@keyframes pipe-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes nuvem-animation{
+from{
+    right: -550px;
+}
+to{
+    right: 100%;
+}
+}
+
